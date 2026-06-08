@@ -1,6 +1,30 @@
 import christine from "@/assets/facilitator-christine.png";
 import sarju from "@/assets/facilitator-sarju.png";
+import premPratap from "@/assets/founder-prem-pratap.png";
+import preeti from "@/assets/founder-preeti.png";
+import aatmoBodh from "@/assets/founder-aatmo-bodh.png";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+
+const founders = [
+  {
+    name: "Swaami Prem Pratap",
+    role: "Founder",
+    img: premPratap,
+    desc: "Dedicated to sharing Osho's vision of meditation and celebration, guiding seekers on their inner journey.",
+  },
+  {
+    name: "Preeti",
+    role: "Founder",
+    img: preeti,
+    desc: "Facilitating heart-centered active meditations and breathwork to help seekers release tension and find silence.",
+  },
+  {
+    name: "Swami Aatmo Bodh (Alpesh)",
+    role: "Founder",
+    img: aatmoBodh,
+    desc: "Overseeing the space and organization, welcoming spiritual explorers into a safe, nurturing retreat environment.",
+  },
+];
 
 const facilitators = [
   {
@@ -30,47 +54,76 @@ export function Facilitators() {
     <section id="facilitators" className="py-24 md:py-36 bg-secondary/50">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="text-center max-w-2xl mx-auto mb-20">
-          <span className="text-xs uppercase tracking-[0.25em] text-saffron">Guides</span>
+          <span className="text-xs uppercase tracking-[0.25em] text-saffron">Guides & Founders</span>
           <h2 className="font-display text-4xl md:text-5xl mt-4 leading-tight text-balance">
-            Meet your facilitators.
+            Meet the Founders & Facilitators
           </h2>
           <p className="mt-5 text-lg text-muted-foreground">
-            Held with warmth, depth, and presence.
+            Held with warmth, depth, presence, and loving support.
           </p>
         </div>
 
-        <div className="space-y-24">
-          {facilitators.map((f, i) => (
-            <div key={f.name} className={`grid lg:grid-cols-5 gap-10 lg:gap-16 items-center ${i % 2 ? "lg:[&>div:first-child]:order-2" : ""}`}>
-              <div className="lg:col-span-2">
-                <div className="relative">
-                  <div className="absolute -inset-4 bg-gradient-warm opacity-20 blur-2xl rounded-full" />
+        {/* Founders Section */}
+        <div className="mb-32">
+          <h3 className="font-display text-3xl mb-12 text-center">Founders of OSHO Bliss</h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            {founders.map((f) => (
+              <div key={f.name} className="bg-card border border-border/60 rounded-3xl p-8 text-center space-y-6 shadow-soft hover:shadow-medium transition-all duration-300">
+                <div className="relative w-44 h-44 mx-auto rounded-full overflow-hidden border-4 border-saffron/20 shadow-soft">
                   <img
                     src={f.img}
-                    alt={`Portrait of ${f.name}, facilitator at OSHO Bliss`}
-                    width={896}
-                    height={1152}
-                    loading="lazy"
-                    className="relative rounded-2xl shadow-soft aspect-[4/5] object-cover w-full"
+                    alt={`Portrait of ${f.name}`}
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>
-              </div>
-              <div className="lg:col-span-3">
-                <span className="text-xs uppercase tracking-[0.25em] text-saffron">{f.origin}</span>
-                <h3 className="font-display text-4xl md:text-5xl mt-3">{f.name}</h3>
-                <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
-                  {f.bio.map((p, idx) => (
-                    <p key={idx}>{p}</p>
-                  ))}
+                <div className="space-y-1">
+                  <h4 className="font-display text-2xl font-semibold">{f.name}</h4>
+                  <span className="text-xs uppercase tracking-widest text-saffron font-medium">{f.role}</span>
                 </div>
-                <div className="mt-8">
-                  <WhatsAppButton message={`Namaste 🙏 I'd like to book a session with ${f.name}.`}>
-                    Book a session with {f.name}
-                  </WhatsAppButton>
+                <p className="text-muted-foreground text-sm leading-relaxed max-w-xs mx-auto">
+                  {f.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Facilitators Section */}
+        <div>
+          <h3 className="font-display text-3xl mb-12 text-center">Retreat Facilitators & Guides</h3>
+          <div className="space-y-24">
+            {facilitators.map((f, i) => (
+              <div key={f.name} className={`grid lg:grid-cols-5 gap-10 lg:gap-16 items-center ${i % 2 ? "lg:[&>div:first-child]:order-2" : ""}`}>
+                <div className="lg:col-span-2">
+                  <div className="relative">
+                    <div className="absolute -inset-4 bg-gradient-warm opacity-20 blur-2xl rounded-full" />
+                    <img
+                      src={f.img}
+                      alt={`Portrait of ${f.name}, facilitator at OSHO Bliss`}
+                      width={896}
+                      height={1152}
+                      loading="lazy"
+                      className="relative rounded-2xl shadow-soft aspect-[4/5] object-cover w-full"
+                    />
+                  </div>
+                </div>
+                <div className="lg:col-span-3">
+                  <span className="text-xs uppercase tracking-[0.25em] text-saffron">{f.origin}</span>
+                  <h3 className="font-display text-4xl md:text-5xl mt-3">{f.name}</h3>
+                  <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
+                    {f.bio.map((p, idx) => (
+                      <p key={idx}>{p}</p>
+                    ))}
+                  </div>
+                  <div className="mt-8">
+                    <WhatsAppButton message={`Namaste 🙏 I'd like to book a session with ${f.name}.`}>
+                      Book a session with {f.name}
+                    </WhatsAppButton>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
