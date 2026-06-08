@@ -1,7 +1,5 @@
-import christineAsset from "@/assets/facilitator-christine.jpg.asset.json";
-import sarjuAsset from "@/assets/facilitator-sarju.jpg.asset.json";
-const christine = christineAsset.url;
-const sarju = sarjuAsset.url;
+import christine from "@/assets/facilitator-christine.png";
+import sarju from "@/assets/facilitator-sarju.png";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const facilitators = [
