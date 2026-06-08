@@ -16,6 +16,11 @@ const items = [
     name: "Priya S.",
     role: "Meditation camp guest",
   },
+  {
+    quote: "My family don’t know I’ve come here. Everyone thinks I’m the strong one, but I’m actually very sensitive. My spouse passed away 2 years ago - this camp was the first time I was able to cry. Thank you for supporting me and helping me open this process.",
+    name: "Anonymous",
+    role: "Retreat participant",
+  },
 ];
 
 export function Testimonials() {
@@ -28,7 +33,7 @@ export function Testimonials() {
             What seekers share with us.
           </h2>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           {items.map((t) => (
             <figure
               key={t.name}

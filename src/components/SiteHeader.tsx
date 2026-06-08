@@ -2,6 +2,7 @@ import { WhatsAppButton } from "./WhatsAppButton";
 import { BrandMark } from "./BrandMark";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import { Instagram } from "lucide-react";
 
 const nav = [
   { href: "#about", label: "About" },
@@ -41,7 +42,18 @@ export function SiteHeader() {
             </a>
           ))}
         </nav>
-        <WhatsAppButton size="sm" className="hidden sm:inline-flex">Enquire</WhatsAppButton>
+        <div className="flex items-center gap-4">
+          <a
+            href="https://www.instagram.com/oshobliss_experiences"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-foreground transition-colors p-2"
+            aria-label="Instagram"
+          >
+            <Instagram className="w-5 h-5" />
+          </a>
+          <WhatsAppButton size="sm" className="hidden sm:inline-flex">Enquire</WhatsAppButton>
+        </div>
       </div>
     </header>
   );

@@ -28,7 +28,7 @@ export function Hero() {
             <span className="w-8 h-px bg-saffron" /> Rishikesh · Himalayas
           </span>
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[1.02] text-balance text-foreground">
-            Discover Inner Silence with{" "}
+            Discover Inner Bliss with{" "}
             <em className="text-saffron not-italic font-normal">OSHO Bliss</em>
           </h1>
           <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">

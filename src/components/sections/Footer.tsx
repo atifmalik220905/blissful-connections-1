@@ -1,6 +1,7 @@
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BrandMark } from "@/components/BrandMark";
 import { WHATSAPP_DISPLAY } from "@/lib/whatsapp";
+import { Instagram } from "lucide-react";
 
 export function Footer() {
   return (
@@ -16,8 +17,17 @@ export function Footer() {
               A meditation and retreat space in Rishikesh — for silence, breath,
               awareness, and the inner journey home.
             </p>
-            <div className="mt-6">
+            <div className="mt-6 flex items-center gap-3">
               <WhatsAppButton>Chat: {WHATSAPP_DISPLAY}</WhatsAppButton>
+              <a
+                href="https://www.instagram.com/oshobliss_experiences"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="opacity-75 hover:opacity-100 transition-opacity p-2.5 bg-background/10 hover:bg-background/25 rounded-full"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-5 h-5 text-background" />
+              </a>
             </div>
           </div>
 
