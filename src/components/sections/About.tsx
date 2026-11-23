@@ -26,18 +26,6 @@ export function About() {
           <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
             While rooted in the sacred energy of Rishikesh, our vision is global: to create 16 conscious communes worldwide, offering spaces for celebration, meditation, and inner connection.
           </p>
-          <div className="mt-10 grid grid-cols-3 gap-6 border-t border-border pt-8">
-            {[
-              { k: "15+", v: "Years of practice" },
-              { k: "1000+", v: "Seekers touched" },
-              { k: "16", v: "Communes worldwide" },
-            ].map((s) => (
-              <div key={s.v}>
-                <div className="font-display text-3xl text-saffron">{s.k}</div>
-                <div className="text-xs uppercase tracking-wider text-muted-foreground mt-1">{s.v}</div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
