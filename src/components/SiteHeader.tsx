@@ -7,7 +7,7 @@ import { Instagram } from "lucide-react";
 const nav = [
   { href: "#about", label: "About" },
   { href: "#services", label: "Services" },
-  { href: "#facilitators", label: "Facilitators" },
+  { href: "#founders", label: "Founders" },
   { href: "#experience", label: "Experience" },
   { href: "#gallery", label: "Gallery" },
   { href: "#contact", label: "Contact" },

@@ -48,7 +48,7 @@ export function Footer() {
               {[
                 ["About", "#about"],
                 ["Services", "#services"],
-                ["Facilitators", "#facilitators"],
+                ["Founders", "#founders"],
                 ["Experience", "#experience"],
                 ["Gallery", "#gallery"],
                 ["Contact", "#contact"],
